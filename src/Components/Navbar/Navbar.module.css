@@ -1,13 +1,15 @@
-
+/* @import "./vars.css"; */
 
 .navbar {
   display: flex;
   position: relative;
   align-items: center;
+  background-color: #04152d;
   justify-content: space-between;
   padding-top: 30px;
+  width: 100%;
   z-index: 2;
-  margin: 0 40px;
+  /* margin: 0 40px; */
 }
 
 .title {
