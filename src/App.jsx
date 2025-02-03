@@ -1,17 +1,14 @@
 import styles from './App.module.css';
-import Carousel from './Components/Carousel/Carousel';
 import Navbar from './Components/Navbar/Navbar';
-// import AboutUs from './Components/About Us/AboutUs';
-// import Home from './Components/Home/Home';
+import Slider from './Components/Slider/Slider';
 
+import { slides } from './data/carouselData.json';
 
 const App = () => {
   return (
     <div className={styles.App}>
       <Navbar />
-      <Carousel />
-      {/* <Home /> */}
-      {/* <AboutUs /> */}
+      <Slider data={slides}/>
     </div>
   )
 }
