@@ -1,5 +1,6 @@
-import React, { useState} from "react";
-import style from "./Slider.module.css";
+import { useState} from "react";
+import PropTypes from "prop-types";
+import "./Slider.css";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
 const Slider = ({ data }) => {
@@ -14,21 +15,19 @@ const Slider = ({ data }) => {
   };
 
   return (
-    <div className={style.slider}>
-      <BsArrowLeftCircleFill onClick={prevSlide} className={style.arrowLeft} />
-      {data.map((item, index) => (
+    <div className="slider">
+      <BsArrowLeftCircleFill onClick={prevSlide} className=" arrow arrow-left" />
+      {data.map((item, idx) => (
         <img
           src={item.src}
           alt={item.alt}
-          key={index}
-          className={style.Slide === index ? "slide" : "slide slide-hidden"}
+          key={idx}
+          className={slide === idx ? "slide" : "slide  slide-hidden"}
         />
       ))}
-      <BsArrowRightCircleFill
-        onClick={nextSlide}
-        className={style.arrowRight}
-      />
-      <span>
+      
+      <BsArrowRightCircleFill onClick={nextSlide} className=" arrow arrow-right" />
+      <span className="indicators">
         {data.map((_, idx) => {
           return (
             <button
@@ -44,5 +43,14 @@ const Slider = ({ data }) => {
     </div>
   );
 };
+Slider.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      src: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
 
 export default Slider;
+
