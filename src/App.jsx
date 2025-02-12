@@ -4,6 +4,8 @@ import Slider from './Components/Slider/Slider';
 import Card from './Components/Card/Card';
 
 import { slides } from './data/carouselData.json';
+import Sub from './Components/Sub-Card/Sub';
+import Footer from './Components/Footer/Footer';
 
 const App = () => {
   return (
@@ -11,6 +13,8 @@ const App = () => {
       <Navbar />
       <Slider data={slides}/>
       <Card />
+      <Sub />
+      <Footer/>
     </div>
   )
 }
