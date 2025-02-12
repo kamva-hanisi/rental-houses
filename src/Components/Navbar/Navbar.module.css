@@ -4,8 +4,9 @@
   display: flex;
   position: relative;
   align-items: center;
-  background-color: #04152d;
+  background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0) 170%);
   justify-content: space-between;
+  border-radius: 0 16px;
   padding-top: 30px;
   width: 100%;
   z-index: 2;

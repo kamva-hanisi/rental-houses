@@ -1,5 +1,6 @@
 import styles from "./card.module.css";
 import WhiteCurve from "./white wave.svg";
+import WhiteCurves from "./white-wave.svg";
 
 export const card = () => {
   return (
@@ -11,19 +12,16 @@ export const card = () => {
           <div className={styles.card}>
             <img
               className={styles.cardImage}
-              src="/public/rental.png"
+              src="/src/components/card/house.jpeg"
               alt="White curve"
             />
-            <span className={styles.cardTitle}>King&apos;s Club</span>
-            <br />
-            <span className={styles.houseAdded}>Added Date:01-03-2017</span>
-            <br />
-            <span className={styles.house - location}>
-              Location: Sano Thimi, Bhaltapur Nepal
-            </span>
-            <br />
-            <button className={styles.cardButton}>Read More</button>
+            <h1 className={styles.cardTitle}>Kensington Houses </h1>
+            <p className={styles.houseAdded}>Added Date:15-12-2024</p>
+            <p className={styles.houselocation}>Location: Johannesburg, Kensington </p>
+            <button className={styles.cardButton}>Book House</button>
           </div>
+          <div className={styles.WhiteCurves}>
+        <img src={WhiteCurves} alt="White curve" /></div>
         </div>
       </div>
     </div>
